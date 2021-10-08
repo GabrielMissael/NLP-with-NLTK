@@ -3,6 +3,8 @@
 - Instructor: Francisco Camacho
 - Link al curso: [Curso de Fundamentos de Procesamiento de Lenguaje Natural con Python y NLTK](https://platzi.com/clases/python-lenguaje-natural/)
 
+_Parte considerable de las notas están dentro de los 5 notebooks_
+
 ## Introducción al Procesamiento de Lenguaje Natural
 
 - Perspectiva y estado del arte: NLP como el camino hacia el ideal de IA. Creemos que es el camino hacia la verdadera IA. NLP significa **Natural Language Processing**. 🤯
@@ -59,3 +61,42 @@
 
 - Hay una operación llamada `flatten`, donde *aplanamos* una lista, de tal manera que no tenemos una lista de listas, si no una sola lista con una secuencia de tokens larga 👀.
 - Contenido en notebook `regular_expressions.ipynb`.
+
+## N-gramas y colocaciones del lenguaje
+
+- **¿Qué es un N-grama?** Es una secuencia de N palabras consecutivas. Por ejemplo, un digrama serían dos palabras consecutivas. 👀
+- **¿Qué son las colocaciones?** Las colocaciones de una palabra son sentencias que indican los lugares que acostumbra a tomar esa palabra en el lenguaje (sin seguir las reglas del lenguaje). 🎚️
+  - Por ejemplo, se escucha bien *le dieron ganas de dormir* pero se escucha raro *le introdujeron ganas de dormir.*
+
+## Introducción a los recursos léxicos
+
+- Un recurso léxico es una colección de palabras o frases con meta-datos. También se les llama lexicon. 🤓
+- Ejemplo:
+  - Le puedes decir que se **calle** o me va a enloquecer.
+  - Ten cuidado al cruzar la **calle** porque el semáforo no funciona.
+- En este caso, el lexicon:
+  - Calle (verbo): Conjugación del verbo callar.
+  - Calle (sustantivo): Referencia al espacio público por donde hay tránsito.
+- Calle es la entra léxica, además se tiene una categoría léxica (verbo o  sustantivo) y por último un significado o descripción. 🧠
+
+## Introducción a WordNet
+
+- Fundamentos con NLTK: WordNet, es un recurso léxico con mucho uso en muchas tareas de procesamiento, pero ya no tanto por el estado actual del deep learning.🧠
+- WordNet es una base de datos con carácter léxico para el idioma inglés. Se compone por conjuntos de sinónimos (**synsets**), cada uno expresando un concepto diferente. Diferentes **synsets** se relacionan por su relación conceptual semántica 🤯.
+- Por ejemplo, un synset:
+  - Palabras → Carro, automovil, auto, coche
+  - Definición → Vehículo motorizado de cuatro ruedas, propulsado por un motor de combustión interna.
+- Para relacionarse, existe una **jerarquía** en WordNet. Hay hiperónimos (mas general) y hipónimo (mas particular).👑
+
+## Usando código estructurado: conexión de Drive a Google Colab
+
+- Podemos montar un notebook de Collab en nuestro Drive para usar los archivos que tenemos ahí. Para hacer eso, hacemos:
+
+    ```python
+    from google.colab import drive
+    drive.mount('content/drive')
+    ```
+
+## Usando código estructurado: Funciones externa
+
+- Podemos ejecutar comandos de terminal desde python usando `!comando` 👀.
